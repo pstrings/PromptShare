@@ -44,7 +44,7 @@ const Feed = () => {
         />
       </form>
       <PromptCardList
-        data={!filteredPosts ? posts : filteredPosts}
+        data={filteredPosts.length === 0 ? posts : filteredPosts}
         handleTagClick={(tag) => setSearchText(tag)}
       />
     </section>
