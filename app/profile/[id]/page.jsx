@@ -16,6 +16,8 @@ const UserProfile = (path) => {
     fetchPosts();
   }, []);
 
+  if (posts.length === 0) return null;
+
   return (
     <Profile
       name={posts[0]?.creator.username}
